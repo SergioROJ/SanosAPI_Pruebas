@@ -1,5 +1,4 @@
 import os
-import requests
 import asyncio
 import logging
 import aiofiles
@@ -127,7 +126,7 @@ async def receive_message(request: IncomingMessage):
         return JSONResponse(content={"status": "error", "message": "Timeout de conexión"}, status_code=status.HTTP_504_GATEWAY_TIMEOUT)
     except HTTPStatusError as e:
         logging.error(f"Ha ocurrido un error no manejado: {e.response.status_code}")
-        return JSONResponse(content={"status": "error", "message": "Error, favor tomar nota de la actividad enviada y comunicarse con el supldior"}, status_code=status.HTTP_400_BAD_REQUEST)
+        return JSONResponse(content={"status": "error", "message": "Error, favor tomar aaa de la actividad enviada y comunicarse con el supldior"}, status_code=status.HTTP_400_BAD_REQUEST)
     except Exception as e:
         # Registro de cualquier excepción ocurrida durante el procesamiento.
         # Es importante capturar y registrar excepciones para facilitar la depuración y mantenimiento.

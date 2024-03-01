@@ -98,7 +98,7 @@ class Message(BaseModel):
     """
     Abstracción de un mensaje, que puede ser de texto, imagen, audio, video o documento.
     """
-    from_: str = Field(..., alias='from')
+    from_: str
     id: str
     timestamp: int
     type: str
